@@ -1,3 +1,9 @@
+/**
+ * @author TEAM SUNDAY
+ *  UTSA CS 3443 - GROUP PROJECT
+ *
+ *ViewList.java handles the logic for ViewList type objects, which are an ArrayList of Item type objects
+ **/
 package application.model;
 
 import java.io.File;
@@ -8,12 +14,18 @@ import java.util.Scanner;
 public class ViewList {
 	
 	ArrayList<Item> inventory;
-	
+	/**
+	 * Constructor for a ViewList object calls parseSheet()
+	 */
 	public ViewList() {
 		
 		inventory = parseSheet();
 	}
 	
+	/**
+	 * ParseSheet() parses and creates an ArrayList of Item type objects from a designated csv file
+	 * @return
+	 */
 	public ArrayList<Item> parseSheet(){
 		ArrayList<Item> scan = new ArrayList<Item>();
 		

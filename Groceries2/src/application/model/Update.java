@@ -1,3 +1,9 @@
+/**
+ * @author TEAM SUNDAY
+ * UTSA CS 3443 - GROUP PROJECT
+ *
+ *Update handles the logic for finding an item within the array list, and making the proper changes to the list
+ **/
 package application.model;
 
 import java.io.IOException;
@@ -24,7 +30,10 @@ public class Update {
 		
 		return -1;
 	}
-	
+	/**
+	 * Writes and updates to .csv database with new changes
+	 * @param newList
+	 */
 	public static void updateCsv(ViewList newList) {
 		
 

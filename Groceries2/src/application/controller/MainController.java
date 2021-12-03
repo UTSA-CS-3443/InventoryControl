@@ -1,3 +1,9 @@
+/**
+ * @author TEAM SUNDAY
+ *  UTSA CS 3443 - GROUP PROJECT
+ *  
+ *  MainController handles the implementation of the home screen of the application
+ */
 package application.controller;
 
 import application.Main;
@@ -29,12 +35,11 @@ public class MainController {
 	public static ViewList currentInventory ;
 	public static Stage stage;
 	
-	public void intitialize() {
-		
-		//currentInventory = new ViewList();
-		
-	}
-	
+	/**
+	 * Each function below represents the action that will occur depending on the button that is pressed
+	 * in order to take the user to the appropriate scene within the app
+	 * @param event
+	 */
 	public void createPage(ActionEvent event) {
 
 		Parent root;

@@ -1,3 +1,11 @@
+/**
+ * @author TEAM SUNDAY
+ *  UTSA CS 3443 - GROUP PROJECT
+ *  
+ *  DeleteController manages the visual implementation of the DELETE feature in the app
+ *  
+ **/
+
 package application.controller;
 
 import application.Main;
@@ -43,7 +51,10 @@ public class DeleteController {
 	public static int location;
 	
 	int flag = 0;
-	
+	/**
+	 * Option to return to the Home screen
+	 * @param event
+	 */
 	public void firstScreen(ActionEvent event) {
 		
 		Parent root;
@@ -61,41 +72,9 @@ public class DeleteController {
 	}
 	
 	/**
-	public void search() {
-		MainController.currentInventory = new ViewList();
-		
-		int key = Integer.parseInt(searchBar.getText());
-		
-		int itemNum = Delete.find(key,MainController.currentInventory);
-		if(itemNum == -1) {
-			
-			System.out.println("NOT FOUND\n");
-		}
-		else {
-			
-			
-			nameText.setPromptText(MainController.currentInventory.getInventory().get(itemNum).getName());
-			location = itemNum;
-			
-		}
-		
-	}
-	
-	public void delete() {
-		
-		if(location != -1) {
-			
-			MainController.currentInventory.getInventory().remove(location);
-			Update.updateCsv(MainController.currentInventory);
-			messageText.setText("Successfully Deleted item!");
-		}
-		
-
-		
-		
-	}
-	**/
-	
+	 * User must find the items is going to be deleted first search(), is used for this
+	 * purpose by traversing the .csv file
+	 */
 	  public void search() {
         MainController.currentInventory = new ViewList();
         if (!searchBar.getText().isEmpty()) {
@@ -128,7 +107,10 @@ public class DeleteController {
         }
 
     }
-
+	  /**
+	   * delete() performs the action of removing the selected inventory item
+	   * from the .csv database
+	   */
     public void delete() {
         if (location != -1 && flag != 0) {
             MainController.currentInventory.getInventory().remove(location);

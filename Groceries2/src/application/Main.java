@@ -1,4 +1,12 @@
 package application;
+/**
+ * @author TEAM SUNDAY
+ *  UTSA CS 3443 - GROUP PROJECT
+ * 
+ * Main.java initiats Stage and scene for the GUI of Inventory control 
+ * starting at Main.Fxml
+ * 
+ */
 	
 import application.model.ViewList;
 //import application.model.SiteUsers;

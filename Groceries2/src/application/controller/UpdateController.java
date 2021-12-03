@@ -1,3 +1,10 @@
+/**
+ * @author TEAM SUNDAY
+ *  UTSA CS 3443 - GROUP PROJECT
+ *  UpdateController takes care of the user implementation that occurs within the Update.fxml scene view
+ *  
+ *  
+ **/
 package application.controller;
 
 import application.Main;
@@ -35,10 +42,13 @@ public class UpdateController {
 	Button updateButton;
 	
 	
-	//public static ViewList currentInventory;
 	public static int location;
 	int flag = 0;
 	
+	/**
+	 * Option to return to Home screene of app
+	 * @param event
+	 */
 	public void firstScreen(ActionEvent event) {
 		
 		Parent root;
@@ -56,41 +66,8 @@ public class UpdateController {
 	}
 
 	/**
-	public void search() {
-		
-		MainController.currentInventory = new ViewList();
-		
-		int key = Integer.parseInt(idText.getText());
-		int itemNum = Update.find(key,MainController.currentInventory);
-		
-		if(itemNum == -1) {
-			
-			System.out.println("NOT FOUND\n");
-		}
-		else {
-			
-			
-			Item found = MainController.currentInventory.getInventory().get(itemNum);
-			location = itemNum;
-			nameText.setText(found.getName());
-			quantityText.setText(found.getQuantity());
-			
-			
-		}
-		
-	}
-	
-	public void update() {
-		
-		MainController.currentInventory.getInventory().get(location).setName(nameText.getText());
-		System.out.println("updating");
-		Update.updateCsv(MainController.currentInventory);
-		System.out.println("updating");
-		
-		
-	}
-	**/
-	
+	 * search() look for a matching ID element of the ViewList Item array list
+	 */
     public void search() {
 
         MainController.currentInventory = new ViewList();
@@ -122,6 +99,11 @@ public class UpdateController {
         }
     }
 
+    /**
+     * 
+     * update() makes proper changes to designated item within list
+     * @param event
+     */
     public void update(ActionEvent event) {
 
         MainController.currentInventory.getInventory().get(location).setName(nameText.getText());

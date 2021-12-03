@@ -1,3 +1,10 @@
+/**
+ * @author TEAM SUNDAY
+ *  UTSA CS 3443 - GROUP PROJECT
+ *  
+ *  Delete.java locates the chosen key value as it is searched for in the ID number of each Item object.
+ *  Returns an int if a match is found
+ **/
 package application.model;
 
 public class Delete {

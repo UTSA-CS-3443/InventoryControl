@@ -1,3 +1,12 @@
+/**
+ * @author TEAM SUNDAY
+ *  UTSA CS 3443 - GROUP PROJECT
+ * 
+ * CreateController serves to handle the acitons and elements needed for a user to create
+ * a new item within the inventory list
+ * 
+ * */
+
 package application.controller;
 
 import java.io.IOException;
@@ -42,12 +51,11 @@ public class CreateController {
 	@FXML
 	TextField costText;
 	
-	
 
-	public void initialize() {
-		
-	}
-	
+	/**
+	 * firstScreen() loads Main.fxml and displays the appropriate dimensions
+	 * @param event
+	 */
 	public void firstScreen(ActionEvent event) {
 		
 		Parent root;
@@ -62,34 +70,10 @@ public class CreateController {
 		}	
 		
 	}
-	
-	/**public void addItem() {
-		
-		String newId = new String();
-		newId = idText.getText();
-		
-		String newName = new String();
-		newName = nameText.getText();
-		
-		String newQuant = new String();
-		newQuant = quantityText.getText();
-		
-		String newCost = new String();
-		newCost = costText.getText();
-		
-		System.out.println(newId + " "+ newName);
-		
-		try {
-			Files.write(Paths.get("data/groceries.csv"), (newId+","+newName+","+newQuant+","+newCost+"\n").getBytes(), StandardOpenOption.APPEND);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
-	**/
-	
-	
+		/**
+		 * addItem() is the called once the user presses the CREATE button
+		 * 
+		 */
 	   public void addItem() {
 
 	        if (nameText.getText().isEmpty() || idText.getText().isEmpty()) {
@@ -124,7 +108,11 @@ public class CreateController {
 	        
 	        
 	    }
-
+	   /**
+	    * findId() checks to see if the special id already exists.
+	    * @param id
+	    * @return
+	    */
 	    boolean findID(int id) {
 	        ViewList v = new ViewList();
 	        ArrayList<Item> items = v.getInventory();

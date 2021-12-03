@@ -1,3 +1,9 @@
+/**
+ * @author TEAM SUNDAY
+ *  UTSA CS 3443 - GROUP PROJECT
+ *  
+ *  ViewListController handles the appearance and behavior of ViewLilst.fxml scene
+ **/
 package application.controller;
 
 import application.Main;
@@ -13,7 +19,11 @@ public class ViewListController {
 	
 	@FXML
 	TextArea listArea;
-
+	
+	/**
+	 * Option to return to hom scree
+	 * @param event
+	 */
 	public void firstScreen(ActionEvent event) {
 		
 		Parent root;
@@ -28,7 +38,9 @@ public class ViewListController {
 		}	
 		
 	}
-	
+	/**
+	 * Formatting and presentation of screen once it is initialized
+	 */
 	public void initialize() {
 		
 		ViewList inventory = new ViewList();

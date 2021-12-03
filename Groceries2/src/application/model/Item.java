@@ -1,3 +1,9 @@
+/**
+ * @author TEAM SUNDAY
+ *  UTSA CS 3443 - GROUP PROJECT
+ *  
+ * Item.java handles the creation of Item type objects, constructor, getters and setters
+ **/
 package application.model;
 
 public class Item {
